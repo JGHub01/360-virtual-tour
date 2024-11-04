@@ -29,44 +29,46 @@
   <script>
     pannellum.viewer('panorama', {
       "default": {
-        "firstScene": "Living Room",
+        "firstScene": "panorama",
         "author": "3D Virtual Designs",
         "autoLoad": true,
         "sceneFadeDuration": 1000
       },
       "scenes": {
-        "livingroom": {
+        "panorama": {
           "title": "Living Room",
           "type": "equirectangular",
           "panorama": "panorama.jpg",
+          "compass": true,
           "hotSpots": [
             {
               "pitch": 0,
               "yaw": 45,
               "type": "scene",
-              "text": "Go to Master Bedroom",
-              "sceneId": "Master Bedroom"
-            }
-          ]
-        },
-        "bedroomvr": {
-          "title": "Master Bedroom",
-          "type": "equirectangular",
-          "panorama": "bedroomvr.jpg",
-          "hotSpots": [
-            {
-              "pitch": 0,
-              "yaw": -30,
-              "type": "scene",
-              "text": "Go to Living Room",
-              "sceneId": "livingroom"
+              "text": "Go to Bedroom",
+              "sceneId": "bedroom"
             },
             {
               "pitch": 0,
-              "yaw": 60,
+              "yaw": -45,
               "type": "scene",
-              "text": "Go to Master Bedroom",
-              "sceneId": "bedroomvr"
+              "text": "Go to Loft",
+              "sceneId": "loft"
+            }
+          ]
+        },
+        "bedroom": {
+          "title": "Bedroom",
+          "type": "equirectangular",
+          "panorama": "bedroomvr.jpg",
+          "compass": true,
+          "hotSpots": [
+            {
+              "pitch": 0,
+              "yaw": 180,
+              "type": "scene",
+              "text": "Back to First Scene",
+              "sceneId": "panorama"
             }
           ]
         },
@@ -74,13 +76,14 @@
           "title": "Loft",
           "type": "equirectangular",
           "panorama": "loftvr.jpg",
+          "compass": true,
           "hotSpots": [
             {
               "pitch": 0,
-              "yaw": 90,
+              "yaw": 180,
               "type": "scene",
-              "text": "Go to Living Room",
-              "sceneId": "livingroom"
+              "text": "Back to First Scene",
+              "sceneId": "panorama"
             }
           ]
         }
