@@ -28,11 +28,63 @@
   <!-- Initialize Pannellum -->
   <script>
     pannellum.viewer('panorama', {
-      "type": "equirectangular",
-      "panorama": "panorama.jpg",
-      "autoLoad": true,
-      "autoRotate": -2,
-      "showControls": true
+      "default": {
+        "firstScene": "Living Room",
+        "author": "3D Virtual Designs",
+        "autoLoad": true,
+        "sceneFadeDuration": 1000
+      },
+      "scenes": {
+        "livingroom": {
+          "title": "Living Room",
+          "type": "equirectangular",
+          "panorama": "panorama.jpg",
+          "hotSpots": [
+            {
+              "pitch": 0,
+              "yaw": 45,
+              "type": "scene",
+              "text": "Go to Master Bedroom",
+              "sceneId": "Master Bedroom"
+            }
+          ]
+        },
+        "bedroomvr": {
+          "title": "Master Bedroom",
+          "type": "equirectangular",
+          "panorama": "bedroomvr.jpg",
+          "hotSpots": [
+            {
+              "pitch": 0,
+              "yaw": -30,
+              "type": "scene",
+              "text": "Go to Living Room",
+              "sceneId": "livingroom"
+            },
+            {
+              "pitch": 0,
+              "yaw": 60,
+              "type": "scene",
+              "text": "Go to Room 1",
+              "sceneId": "room1"
+            }
+          ]
+        },
+        "loft": {
+          "title": "Loft",
+          "type": "equirectangular",
+          "panorama": "loftvr.jpg",
+          "hotSpots": [
+            {
+              "pitch": 0,
+              "yaw": 90,
+              "type": "scene",
+              "text": "Go to Living Room",
+              "sceneId": "livingroom"
+            }
+          ]
+        }
+      }
     });
   </script>
 </body>
