@@ -30,12 +30,16 @@
     pannellum.viewer('panorama', {
       "default": {
         "firstScene": "livingroomvr",
-        "author": "www.3dvirtualdesigns.com",
+        "author": "www.3dvirtual-designs.com",
         "sceneFadeDuration": 1000,
         "autoLoad": true,
         "compass": true,
         "showControls": true,
-        "showFullscreenCtrl": true
+        "showFullscreenCtrl": true,
+        "autoRotate": -2,  // Rotation speed in degrees per second
+        "autoRotateInactivityDelay": 5000,  // Delay in milliseconds
+        "minPitch": -80, // Limit downward view
+        "maxPitch": 80   // Limit upward view
       },
       "scenes": {
         "livingroomvr": {
